@@ -1,0 +1,94 @@
+/* details color  #c5139e8e */
+
+/* layout */
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+/* clearfix, inspired by bootstrap */
+.cfx:before,
+.cfx:after {
+    content: "";
+    display: table;
+}
+.cfx:after {
+    clear: both;
+}
+.cfx {
+    clear: both;
+    *zoom: 1;
+}
+
+/* logo */
+.logo {
+    float: left;
+    padding: 40px 0 22px 0;
+    border-top: 4px solid #c5139e8e;
+}
+
+/* footer */
+.main-footer {
+    padding-bottom: 44px;
+    padding-top: 44px;
+}
+
+.main-footer small {
+    float: left;
+}
+
+/* columns */
+.col-1-5 {
+    max-width: 80%;
+    width: 20%;
+    display: inline-block;
+    vertical-align: top; 
+    /* check vertical align */
+}
+
+.grid, .col-1-5 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.container,
+.grid {
+    margin: 0 auto;
+    max-width: 100%;
+    width: 960px;
+}
+
+.container {
+    /* margin: 0 auto; */
+    padding-left: 30px;
+    padding-right: 30px;
+    /* max-width: 100%; */
+    /* 1920/2 = 960 */
+    /* width: 960px;  */
+    border: 1px solid red;
+}
+
+/* typography */
+
+h1, h3, h4, h5, p {
+    margin-bottom: 22px;
+}
+
+/* button */
+
+.btn {
+    border-radius: 5px;
+    display: inline-block;
+    margin: 0;
+}
+
+.btn-big {
+    border: 1px solid #c5139e8e;
+    padding: 10px 30px;
+}
+
+/* index */
+
+.banner {
+    padding: 22px 80px 66px 80px;
+}
