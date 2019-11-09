@@ -1,15 +1,17 @@
-/* details color  #c5139e8e */
+/* link, text on white background color: #c5139e8e */
+/* background color: #facdf0 */
+/* secondary link and heading color: rgb(98, 45, 197) */
+/* link hover color: black */
 
 /*
-  ========================================
-  Custom styles
-  ========================================
+  ////////////////////////////////////////
+  GENERAL SET UP
+  ////////////////////////////////////////
 */
 
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:100,400,400i,700&display=swap');
 
 body {
-    color: #888;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -18,6 +20,12 @@ p {
     font-family: 'Roboto Slab', serif;
     text-align: justify;
 }
+
+/*
+  ////////////////////////////////////////
+  LINKS
+  ////////////////////////////////////////
+*/
 
 .main-header a,
 .main-footer a {
@@ -29,13 +37,31 @@ p {
     color: black;
 }
 
-/* layout */
+a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+a {
+    color: rgb(98, 45, 197);
+    text-decoration: none;
+}
+
+.preview a:hover h3 {
+    color: black;
+}
+
+/*
+  ////////////////////////////////////////
+  LAYOUT
+  ////////////////////////////////////////
+*/
 
 *, *:before, *:after {
     box-sizing: border-box;
 }
 
-/* clearfix, inspired by bootstrap */
+/* clearfix, inspired by bootstrap, used for fixing floats */
 .cfx:before,
 .cfx:after {
     content: "";
@@ -49,7 +75,38 @@ p {
     *zoom: 1;
 }
 
-/* logo */
+.col {
+    flex: 1;
+    padding-left: 15px;
+    padding-right: 15px;
+    vertical-align: top; 
+}
+
+.flex {
+    display: flex;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding: 66px 15px 44px 15px;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 960px;
+}
+
+.container {
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    max-width: 100%;
+    /* 1920/2 = 960 */
+    width: 960px; 
+}
+
+/*
+  ////////////////////////////////////////
+  HEADER
+  ////////////////////////////////////////
+*/
+
 .logo {
     float: left;
     padding: 40px 0 22px 0;
@@ -66,28 +123,6 @@ p {
     text-align: right;
 }
 
-/*
-  ========================================
-  Navigation
-  ========================================
-*/
-
-.nav {
-    text-align: right;
-    /* border: 1px solid red; */
-}
-
-.nav li {
-    display: inline-block;
-    margin: 0 10px;
-    vertical-align: top;
-    list-style-type: none;
-}
-
-.nav li:last-child {
-    margin-right: 0;
-}  
-  
 .main-nav {
     font-size: 14px;
     font-weight: bold;
@@ -95,7 +130,12 @@ p {
     text-transform: uppercase;
 }
 
-/* footer */
+/*
+  ////////////////////////////////////////
+  FOOTER
+  ////////////////////////////////////////
+*/
+
 .main-footer {
     color: #c5139e8e;
     font-size: 14px;
@@ -109,38 +149,32 @@ p {
     font-weight: bold;
 }
 
-/* columns */
-.col {
-    flex: 1;
-    padding-left: 15px;
-    padding-right: 15px;
-    vertical-align: top; 
-    /* check vertical align */
-    /* border: 1px solid red; */
+/*
+  ////////////////////////////////////////
+  NAVIGATION
+  ////////////////////////////////////////
+*/
+
+.nav {
+    text-align: right;
 }
 
-.flex {
-    display: flex;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding: 66px 15px 44px 15px;
-    margin: 0 auto;
-    max-width: 100%;
-    width: 960px;
-    /* border: 1px solid red; */
+.nav li {
+    display: inline-block;
+    margin: 0 10px;
+    vertical-align: top;
+    list-style-type: none;
 }
 
-.container {
-    margin: 0 auto;
-    padding-left: 30px;
-    padding-right: 30px;
-    max-width: 100%;
-    /* 1920/2 = 960 */
-    width: 960px; 
-    /* border: 1px solid red; */
-}
-
-/* typography */
+.nav li:last-child {
+    margin-right: 0;
+}  
+  
+/*
+  ////////////////////////////////////////
+  HEADINGS
+  ////////////////////////////////////////
+*/
 
 h1, h3, h4, h5, p {
     margin-bottom: 22px;
@@ -172,27 +206,12 @@ h5 {
     font-weight: bold;
     text-transform: uppercase;
 }
-  
+
 /*
-  ========================================
-  Links
-  ========================================
+  ////////////////////////////////////////
+  BUTTON
+  ////////////////////////////////////////
 */
-
-a:hover {
-    color: black;
-    text-decoration: underline;
-}
-a {
-    color: rgb(98, 45, 197);
-    text-decoration: none;
-}
-
-.preview a:hover h3 {
-    color: black;
-}
-
-/* button */
 
 .btn {
     border-radius: 5px;
@@ -213,7 +232,11 @@ a {
     background: white;
 }
 
-/* index */
+/*
+  ////////////////////////////////////////
+  BANNERS
+  ////////////////////////////////////////
+*/
 
 .banner {
     line-height: 44px;
@@ -247,9 +270,30 @@ a {
     text-align: center;
 }
 
-/* media */
+/*
+  ////////////////////////////////////////
+  INDEX PREVIEW
+  ////////////////////////////////////////
+*/
+
+.preview img {
+    display: block;
+    margin-bottom: 22px;
+    max-width: 100%;
+}
+
+/*
+  ////////////////////////////////////////
+  MEDIA
+  ////////////////////////////////////////
+*/
+
 @media screen and (max-width: 800px) {
     .flex {
       flex-direction: column;
+    }
+
+    .preview img {
+        max-width: 30%;
     }
   }

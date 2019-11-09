@@ -1,0 +1,9 @@
+@media print {
+    .nav {
+        display: none;        
+    }
+
+    img {
+        width: 20%;
+    }
+}
